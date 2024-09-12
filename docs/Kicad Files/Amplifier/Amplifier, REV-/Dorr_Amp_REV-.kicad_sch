@@ -3447,7 +3447,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm"
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm"
 			(at 186.3852 73.66 0)
 			(effects
 				(font
@@ -3481,7 +3481,7 @@
 			(uuid "f386dd28-9609-43c4-a681-5755ae57b787")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C7")
 					(unit 1)
@@ -3549,7 +3549,7 @@
 			(uuid "445cb74e-7611-44f4-827c-ebecb3522bdc")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R18")
 					(unit 1)
@@ -3617,7 +3617,7 @@
 			(uuid "b224acc2-7b75-4957-81d6-3cab05f0b34c")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R14")
 					(unit 1)
@@ -3682,7 +3682,7 @@
 			(uuid "99a1b47d-30b8-47ce-a606-136156b51e6a")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR05")
 					(unit 1)
@@ -3749,7 +3749,7 @@
 			(uuid "17413e45-2649-4428-b7fc-305566bff44b")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R2")
 					(unit 1)
@@ -3816,7 +3816,7 @@
 			(uuid "a8f16195-6dc6-4b57-b771-3dbc3532a685")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R6")
 					(unit 1)
@@ -3881,7 +3881,7 @@
 			(uuid "d44b36d0-a51e-4fec-9fce-b739bc534987")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR06")
 					(unit 1)
@@ -3949,7 +3949,7 @@
 			(uuid "0857ca97-1367-45ad-8689-01c722c933f5")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C8")
 					(unit 1)
@@ -4016,7 +4016,7 @@
 			(uuid "0fe88e37-16fa-4490-a701-25d37108ff9a")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R5")
 					(unit 1)
@@ -4049,7 +4049,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
 			(at 97.79 104.4448 0)
 			(effects
 				(font
@@ -4083,7 +4083,7 @@
 			(uuid "982a831c-876c-490b-bd8a-0ae340f7d977")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C3")
 					(unit 1)
@@ -4151,7 +4151,7 @@
 			(uuid "8aaaba2d-f9ae-4696-8e31-f76b4d616fd8")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "TP2")
 					(unit 1)
@@ -4295,7 +4295,7 @@
 			(uuid "c219a381-e7ed-402a-a036-7f510afb283f")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "TP1")
 					(unit 1)
@@ -4384,7 +4384,7 @@
 			(uuid "9097bc08-8c45-40a2-b336-35cea730be53")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "D4")
 					(unit 1)
@@ -4419,7 +4419,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:POT_3362P"
+		(property "Footprint" "Custom_Footprints:POT_3362P"
 			(at 110.49 126.238 90)
 			(effects
 				(font
@@ -4453,7 +4453,7 @@
 			(uuid "23a325cc-205e-487f-8185-6fe8615b12cb")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R7")
 					(unit 1)
@@ -4524,7 +4524,7 @@
 			(uuid "de8f8517-33f8-4d1a-8040-d59a2040ac4b")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R13")
 					(unit 1)
@@ -4592,7 +4592,7 @@
 			(uuid "03813b9e-e3ae-4fda-b66a-c186214ad958")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R10")
 					(unit 1)
@@ -4628,7 +4628,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm"
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm"
 			(at 186.3852 93.98 0)
 			(effects
 				(font
@@ -4662,7 +4662,7 @@
 			(uuid "cf9d0d4a-ffbb-4c21-a4bd-f19228bf865c")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C1")
 					(unit 1)
@@ -4730,7 +4730,7 @@
 			(uuid "f426ee51-98e0-4305-99f5-d5b5994a340f")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R16")
 					(unit 1)
@@ -4808,7 +4808,7 @@
 			(uuid "2fc67c0e-1fd3-4749-8e89-ebcca73e9b85")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q10")
 					(unit 1)
@@ -4873,7 +4873,7 @@
 			(uuid "ae354810-eb0a-4f99-972d-bc3bf7e8089c")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR07")
 					(unit 1)
@@ -4906,7 +4906,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:CONN_1935776_PXC"
+		(property "Footprint" "Custom_Footprints:CONN_1935776_PXC"
 			(at 83.82 83.82 0)
 			(effects
 				(font
@@ -4940,7 +4940,7 @@
 			(uuid "6f6650b3-9502-431d-8b3f-f54134503da2")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "J2")
 					(unit 1)
@@ -5007,7 +5007,7 @@
 			(uuid "64caf934-ef66-4523-bd9c-9f356668b42d")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R4")
 					(unit 1)
@@ -5041,7 +5041,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:CONN_1935776_PXC"
+		(property "Footprint" "Custom_Footprints:CONN_1935776_PXC"
 			(at 100.33 83.82 0)
 			(effects
 				(font
@@ -5075,7 +5075,7 @@
 			(uuid "708b1ba9-5b34-467b-8d5d-5bb18a9e5be0")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "J3")
 					(unit 1)
@@ -5140,7 +5140,7 @@
 			(uuid "a07385dc-ca9d-4375-b50b-2b495e31b65e")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR01")
 					(unit 1)
@@ -5308,7 +5308,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:POT_3362P"
+		(property "Footprint" "Custom_Footprints:POT_3362P"
 			(at 110.49 41.402 90)
 			(effects
 				(font
@@ -5342,7 +5342,7 @@
 			(uuid "78e406af-99ed-40f0-9321-d54d776c3140")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R11")
 					(unit 1)
@@ -5410,7 +5410,7 @@
 			(uuid "4b2bbc52-1dd9-4118-b819-a8ef099c8a73")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R17")
 					(unit 1)
@@ -5543,7 +5543,7 @@
 			(uuid "4da757ce-aba0-401f-999d-471b20f0d09a")
 		)
 		(instances
-			(project ""
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR09")
 					(unit 1)
@@ -5579,7 +5579,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm"
 			(at 143.2052 135.89 0)
 			(effects
 				(font
@@ -5613,7 +5613,7 @@
 			(uuid "289cc780-48a8-4ecc-be7e-e758abe39ca4")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C4")
 					(unit 1)
@@ -5678,7 +5678,7 @@
 			(uuid "8c59d108-b0a5-4606-a45c-3ffb2088a34c")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR02")
 					(unit 1)
@@ -5744,7 +5744,7 @@
 			(uuid "3a6e8b56-0699-4188-a082-db936ca2e069")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#FLG01")
 					(unit 1)
@@ -5833,7 +5833,7 @@
 			(uuid "e0c9ea91-60d3-4f7f-aa42-bb563ce9e74b")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "D3")
 					(unit 1)
@@ -5909,7 +5909,7 @@
 			(uuid "febb02f8-dcf8-42dd-9bc8-4f56790fc517")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q3")
 					(unit 1)
@@ -5977,7 +5977,7 @@
 			(uuid "208c5ea9-20a6-46fa-b75c-d12c3d4fbc5b")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R12")
 					(unit 1)
@@ -6120,7 +6120,7 @@
 			(uuid "bfb89fa2-8380-48d9-8e46-a0b7b6c95517")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q1")
 					(unit 1)
@@ -6157,7 +6157,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm"
 			(at 143.2052 31.75 0)
 			(effects
 				(font
@@ -6191,7 +6191,7 @@
 			(uuid "32bd3285-b1d2-4039-87aa-5c07d49454bb")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C6")
 					(unit 1)
@@ -6324,7 +6324,7 @@
 			(uuid "753e9e31-5095-4cd8-8a37-c67519989c20")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R8")
 					(unit 1)
@@ -6401,7 +6401,7 @@
 			(uuid "1746d8a3-501b-49ac-98d2-0ab462d29f4a")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q4")
 					(unit 1)
@@ -6435,7 +6435,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
 			(at 97.79 63.1952 0)
 			(effects
 				(font
@@ -6469,7 +6469,7 @@
 			(uuid "0cc15b6d-d4d9-461d-8526-39f46742a240")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "C5")
 					(unit 1)
@@ -6536,7 +6536,7 @@
 			(uuid "6a34484a-2646-46e8-a520-3bc986ede5f5")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R9")
 					(unit 1)
@@ -6612,7 +6612,7 @@
 			(uuid "b9f7b64c-f908-4c29-ab07-222ce1f2efeb")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q8")
 					(unit 1)
@@ -6689,7 +6689,7 @@
 			(uuid "7f1a70c5-61cb-4348-b976-fc460e41c45d")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q7")
 					(unit 1)
@@ -6725,7 +6725,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:CONN_1935776_PXC"
+		(property "Footprint" "Custom_Footprints:CONN_1935776_PXC"
 			(at 208.28 83.82 0)
 			(effects
 				(font
@@ -6759,7 +6759,7 @@
 			(uuid "68e3bbe0-99a3-4ee0-b0b4-ca88a4075868")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "J1")
 					(unit 1)
@@ -6824,7 +6824,7 @@
 			(uuid "10864acf-b640-4166-923e-5be6b2922811")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR04")
 					(unit 1)
@@ -6892,7 +6892,7 @@
 			(uuid "2a6fd589-c137-4018-abef-8a09013a4448")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R15")
 					(unit 1)
@@ -6980,7 +6980,7 @@
 			(uuid "4e2e32d5-b8d7-4ca7-ad4d-9bcc8886ea4e")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "D2")
 					(unit 1)
@@ -7047,7 +7047,7 @@
 			(uuid "dd4a40fe-caca-4aba-aa57-308188fac24f")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R3")
 					(unit 1)
@@ -7135,7 +7135,7 @@
 			(uuid "ff2c67ea-b205-4885-91f3-aa95479f4709")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "D1")
 					(unit 1)
@@ -7205,7 +7205,7 @@
 			(uuid "381a7b96-dd9a-47f2-b38e-0f6a2fff983b")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "R1")
 					(unit 1)
@@ -7282,7 +7282,7 @@
 			(uuid "48e20120-39e9-4c3f-aa7a-5e00e2fc32a6")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q6")
 					(unit 1)
@@ -7359,7 +7359,7 @@
 			(uuid "45d973d6-339d-4180-8cde-1350ac6631f2")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "Q2")
 					(unit 1)
@@ -7424,7 +7424,7 @@
 			(uuid "2cc01653-8eb6-4c30-8f92-33401227fb12")
 		)
 		(instances
-			(project "Dorr_Amp_Draft3"
+			(project "Dorr_Amp_REV-"
 				(path "/cc9ff92f-9b14-4efc-8fda-45ee1c134506"
 					(reference "#PWR03")
 					(unit 1)
