@@ -1,22 +1,26 @@
-Circuit: * C:\Users\tstor\OneDrive\Desktop\Amplifier, REV-A\Current_Calc\Current_Calc\Dorr_full_RevA.asc
+Circuit: * C:\Users\tstor\Github\Bluetooth-Speaker-Senior-Design\docs\Kicad Files\Amplifier\Amplifier, REV-\Current_Calc\Current_Calc\Dorr_full_RevA.asc
 
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Sep 11 13:30:53 2024
-Total elapsed time: 0.541 seconds.
+Date: Thu Sep 12 11:31:40 2024
+Total elapsed time: 0.508 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 45109
-traniter = 45096
-tranpoints = 16062
-accept = 11139
-rejected = 4923
+totiter = 45034
+traniter = 45021
+tranpoints = 15956
+accept = 11025
+rejected = 4931
 matrix size = 62
 fillins = 96
 solver = Normal
-Avg thread counts: 1.1/1.2/1.2/1.1
-Matrix Compiler1: 10.47 KB object code size  3.1/2.3/[2.2]
-Matrix Compiler2: 7.01 KB object code size  0.8/1.1/[0.5]
+Avg thread counts: 1.0/1.0/1.0/1.0
+Matrix Compiler1: 10.47 KB object code size  2.5/2.7/[1.0]
+Matrix Compiler2: 7.01 KB object code size  1.0/2.1/[0.5]
 
