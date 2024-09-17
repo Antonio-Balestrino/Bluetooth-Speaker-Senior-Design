@@ -1,0 +1,11 @@
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--F_Cu.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--B_Cu.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--F_Paste.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--B_Paste.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--F_Silkscreen.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--B_Silkscreen.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--F_Mask.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--B_Mask.gbr'.
+Plotted to 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--Edge_Cuts.gbr'.
+Created Gerber job file 'C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Amplifier\Dorr_Amp\Amplifier, REV-\Dorr_Amp_REV--job.gbrjob'.
+Info: Done.
