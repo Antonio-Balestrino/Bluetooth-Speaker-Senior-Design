@@ -4928,7 +4928,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:CONN_1935776_PXC"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
 			(at 83.82 83.82 0)
 			(effects
 				(font
@@ -5063,7 +5063,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:CONN_1935776_PXC"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
 			(at 100.33 83.82 0)
 			(effects
 				(font
@@ -6179,7 +6179,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:POT_3362P"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3386P_Vertical"
 			(at 110.49 119.38 0)
 			(effects
 				(font
@@ -6724,34 +6724,32 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 208.28 83.82 0)
+		(at 208.28 86.36 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e75235bf-dfee-4c5b-a2cb-eb505c26e57d")
 		(property "Reference" "J1"
-			(at 210.82 83.8199 0)
+			(at 208.28 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "Speaker"
-			(at 210.82 86.3599 0)
+			(at 208.28 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:CONN_1935776_PXC"
-			(at 208.28 83.82 0)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 208.28 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6760,7 +6758,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 208.28 83.82 0)
+			(at 208.28 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6769,7 +6767,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 208.28 83.82 0)
+			(at 208.28 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6818,7 +6816,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:POT_3362P"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3386P_Vertical"
 			(at 110.49 50.8 0)
 			(effects
 				(font
