@@ -10,7 +10,7 @@
 	(title_block
 		(title "Amplifier PCB")
 		(date "2024-09-08")
-		(rev "-")
+		(rev "A")
 		(company "Team BOOM")
 	)
 	(layers
@@ -51,7 +51,7 @@
 		(grid_origin 38.1 37.465)
 		(pcbplotparams
 			(layerselection 0x00010e0_ffffffff)
-			(plot_on_all_layers_selection 0x0000000_00000000)
+			(plot_on_all_layers_selection 0x00010e0_80000001)
 			(disableapertmacros no)
 			(usegerberextensions no)
 			(usegerberattributes yes)
@@ -84,7 +84,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "E:/Tristan/GitHub/Bluetooth-Speaker-Senior-Design/docs/Kicad Files/Amplifier/Power_Amp_v1.0/Gerber Files/")
+			(outputdirectory "Gerber Files/")
 		)
 	)
 	(net 0 "")
@@ -17124,7 +17124,7 @@
 		(layer "User.1")
 		(uuid "bbb263a4-b35f-4e25-9ce3-d1dca14b95c6")
 	)
-	(gr_text "SAN DIEGO STATE UNIVERSITY COLLEGE OF ENGINEERING\nDEPARTMENT OF ELECTRICAL & COMPUTER ENGINEERING\nTEAM BOOM: AMPLIFIER MODULE, REV-"
+	(gr_text "SAN DIEGO STATE UNIVERSITY COLLEGE OF ENGINEERING\nDEPARTMENT OF ELECTRICAL & COMPUTER ENGINEERING\nTEAM BOOM: AMPLIFIER MODULE, REV. A"
 		(at 189.992 121.666 90)
 		(layer "F.SilkS")
 		(uuid "3d273157-e77f-47ed-8774-1634a010eb52")

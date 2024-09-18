@@ -447,7 +447,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Power_Amp_v1.0.kicad_pro",
+    "filename": "Power_Amp_RevA.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -482,7 +482,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "Dorr_Amp_Draft3.net",
-      "plot": "E:/Tristan/GitHub/Bluetooth-Speaker-Senior-Design/docs/Kicad Files/Amplifier/Power_Amp_v1.0/Gerber Files/",
+      "plot": "Gerber Files/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
