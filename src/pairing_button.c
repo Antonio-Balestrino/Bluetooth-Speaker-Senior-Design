@@ -4,8 +4,8 @@
 #include <stdio.h>
 
 // Define clock frequency and baud rate for UART
-#define F_CPU 16000000UL
-#define BAUD 115200
+#define F_CPU 8000000UL // 8 MHz clock
+#define BAUD 38400
 #define BAUDRATE ((F_CPU) / (BAUD * 16UL) - 1)
 
 // Define pins for the button and LED
@@ -146,6 +146,7 @@ void turn_off_LED() {
     PORTB &= ~(1 << LED_PIN);  // Set LED_PIN low
 }
 
+// Replace with interrupt
 // Function to check if the button is pressed (with debouncing)
 bool is_button_pressed() {
     if (!(PINB & (1 << BUTTON_PIN))) {  // Check if button is pressed (active low)
@@ -166,6 +167,7 @@ void trigger_bluetooth_pairing() {
     BM83_GetEventType(event); // Check for acknowledgment or event type
 }
 
+// ISR for receiving data from the BM83 module to be added
 
 int main(void) {
     // Initialize UART, LED, BM83 module, and button GPIO
@@ -186,3 +188,9 @@ int main(void) {
         }
     }
 }
+
+// If the atmega does not receive an ack within 200ms, atmega resends same command
+// Interrupt
+
+//After sending the event from BM83 to MCU, BM83 waits for 800 ms timeout period. If ACK is received from MCU
+//within this time or timeout happens, then the next event is sent.
