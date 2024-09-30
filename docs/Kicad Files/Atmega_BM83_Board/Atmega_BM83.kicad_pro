@@ -266,7 +266,10 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "18V": "18V",
+      "8V": "8V"
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
