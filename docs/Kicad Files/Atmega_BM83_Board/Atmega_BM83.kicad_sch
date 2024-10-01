@@ -2144,6 +2144,12 @@
 		(uuid "9a837c15-d6c9-4b7a-a10d-7198e7a9bf94")
 	)
 	(junction
+		(at 105.41 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a54f18c5-16f9-4fcb-9d7a-4ec5dac16e09")
+	)
+	(junction
 		(at 143.51 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2166,6 +2172,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1d1ccf9-68d4-4b50-a9fd-612d64c0a200")
+	)
+	(junction
+		(at 115.57 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d5ec3622-7160-4c35-857d-10987dd5798f")
 	)
 	(junction
 		(at 104.14 86.36)
@@ -2231,6 +2243,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 41.91) (xy 105.41 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d1a6fb3-c8ab-47c2-998c-82160248cd58")
+	)
+	(wire
+		(pts
 			(xy 132.08 87.63) (xy 129.54 87.63)
 		)
 		(stroke
@@ -2248,6 +2270,16 @@
 			(type default)
 		)
 		(uuid "147080ab-9247-4bb7-afe2-beea92cbadc8")
+	)
+	(wire
+		(pts
+			(xy 102.87 44.45) (xy 105.41 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "165553e9-9afb-40fe-9031-f62b58c6b7ad")
 	)
 	(wire
 		(pts
@@ -2368,6 +2400,16 @@
 			(type default)
 		)
 		(uuid "446d7f70-f460-4177-b8a2-80ce0a8a56d6")
+	)
+	(wire
+		(pts
+			(xy 105.41 31.75) (xy 105.41 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45c4126e-716a-403f-a636-dadfa5a60a44")
 	)
 	(wire
 		(pts
@@ -2571,6 +2613,26 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 44.45) (xy 105.41 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82af287b-b2ae-4f19-a959-7ea08b38251b")
+	)
+	(wire
+		(pts
+			(xy 105.41 53.34) (xy 105.41 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83584761-7691-4db0-8189-b0a9e2228f82")
+	)
+	(wire
+		(pts
 			(xy 129.54 82.55) (xy 132.08 82.55)
 		)
 		(stroke
@@ -2608,6 +2670,16 @@
 			(type default)
 		)
 		(uuid "8949e5f6-14a0-4aaf-81ed-901d775a3d01")
+	)
+	(wire
+		(pts
+			(xy 105.41 31.75) (xy 115.57 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fed3b18-255a-4cf1-a5d5-01b4ebd40613")
 	)
 	(wire
 		(pts
@@ -3383,6 +3455,28 @@
 			)
 		)
 	)
+	(global_label "16V"
+		(shape input)
+		(at 102.87 44.45 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be2c52ab-c993-4f6d-a503-93f464513f66")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 96.3772 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "OUT B"
 		(shape input)
 		(at 167.64 80.01 0)
@@ -3427,7 +3521,7 @@
 			)
 		)
 	)
-	(global_label "18V"
+	(global_label "16V"
 		(shape input)
 		(at 132.08 74.93 180)
 		(fields_autoplaced yes)
@@ -3783,6 +3877,73 @@
 			(project ""
 				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 105.41 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "12ddccd7-d0c8-4cda-859d-866bf2b6ade0")
+		(property "Reference" "R8"
+			(at 108.712 48.514 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 109.22 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 103.632 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 105.41 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0634db7-098a-46ea-91ca-8206c750f1e9")
+		)
+		(pin "2"
+			(uuid "121cf22e-217a-40dc-a6cf-2f56415b9e5d")
+		)
+		(instances
+			(project "Atmega_BM83"
+				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -4762,6 +4923,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 105.41 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7862f62f-0365-4f20-9d2d-40c323d61f87")
+		(property "Reference" "R7"
+			(at 108.966 37.338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 108.966 39.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 103.632 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 105.41 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0c544296-f8d9-4ff7-a2f4-564079ec8574")
+		)
+		(pin "2"
+			(uuid "ccc0eb3e-3ed9-4091-8582-91a81b0b884e")
+		)
+		(instances
+			(project "Atmega_BM83"
+				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 132.08 96.52 0)
 		(unit 1)
@@ -4822,6 +5050,72 @@
 			(project "Atmega_BM83"
 				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 105.41 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97a0334f-4195-4196-ae86-48aa24cb56a1")
+		(property "Reference" "#PWR09"
+			(at 105.41 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 105.41 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8cd7402b-999d-4198-9a63-cf83ce64b050")
+		)
+		(instances
+			(project "Atmega_BM83"
+				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
