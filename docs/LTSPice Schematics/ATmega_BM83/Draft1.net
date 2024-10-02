@@ -1,0 +1,8 @@
+* E:\Tristan\GitHub\Bluetooth-Speaker-Senior-Design\docs\LTSPice Schematics\ATmega_BM83\Draft1.asc
+V1 N001 0 5
+R1 N001 N002 3.4k
+R3 N002 0 6.6k
+.model D_ZENER D(BV=2V IBV=0.1mA)
+.tran 1
+.backanno
+.end
