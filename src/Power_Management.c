@@ -48,7 +48,7 @@ void BM83_Send_Power_Command(uint8_t opcode, uint8_t parameter1, uint8_t paramet
 }
 
 void BM83_Power_On(void) {
-    PORTB |= (1 << MFB);
+    //PORTB |= (1 << MFB);
     BM83_Send_Power_Command(0x02, 0x00, 0x51); //power on commands
     _delay_ms(20);
     BM83_Send_Power_Command(0x02, 0x00, 0x52);
@@ -60,7 +60,7 @@ void BM83_Power_Off(void) {
     _delay_ms(20);
     BM83_Send_Power_Command(0x02, 0x00, 0x54);
     _delay_ms(20);  
-   PORTB &= ~(1 << MFB);
+   //PORTB &= ~(1 << MFB);
 }
 
 void turn_on_LED() {
@@ -86,11 +86,12 @@ void Power_Init(void) {
     PORTD |= (1 << POWER_OFF_PIN);      // Enable pull-up
 
     // External interrupts configuration
-    EICRA &= ~((1 << ISC01) | (1 << ISC00));  // Trigger on low level for power on
+    EICRA |= (1 << ISC01) | (1 << ISC00);  // Trigger on rising edge for INT0 (power on)
     EIMSK |= (1 << INT0);                   // Enable INT0 for power on
 
-    EICRA &= ~((1 << ISC11) | (1 << ISC10)); // Trigger on low level for power off
-    EIMSK |= (1 << INT1);                   // Enable INT1 for power off
+    EICRA |= (1 << ISC11);                 // Trigger on falling edge for INT1 (power off)
+    EICRA &= ~(1 << ISC10);                
+    EIMSK |= (1 << INT1); 
 }
 
 ISR(INT0_vect) { 
