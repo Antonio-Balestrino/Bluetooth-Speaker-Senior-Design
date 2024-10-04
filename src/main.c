@@ -1,22 +1,23 @@
-/*
- * GccApplication1.c
- *
- * Created: 9/20/2024 11:15:51 AM
- * Author : Ponsai
- */ 
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include <stdio.h>
+#include <util/delay.h>
+#include <stdlib.h>
 
+<<<<<<< Updated upstream
 #define F_CPU 8000000UL
 #define BAUD 38400
+=======
+#define F_CPU 16000000UL
+#define BAUD 9600
+>>>>>>> Stashed changes
 #define BAUDRATE ((F_CPU) / (BAUD * 16UL) - 1)
 
 volatile uint8_t adc_param = 0;         // Scaled volume parameter
 volatile uint8_t last_adc_param = 0;    // Store last volume value
 volatile uint16_t adc_value = 0;        // Store ADC result
+<<<<<<< Updated upstream
 char buffer[10];
 
 // Initialize UART
@@ -25,16 +26,34 @@ void USART_Init(unsigned int baud) {
 	UBRR0L = (unsigned char)baud;
 	UCSR0B = (1 << TXEN0 | (1 << RXEN0) | (1 << RXCIE0));  // Enable transmitter
 	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);  // 8-bit data
+=======
+char buffer[15];
+
+void USART_Init(unsigned int BAUD1) {
+    UBRR0H = (unsigned char)(BAUD1 >> 8);
+    UBRR0L = (unsigned char)BAUD1;
+    UCSR0B = (1 << TXEN0) | (1 << RXEN0); // Enable RX Complete Interrupt
+    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00); // 8-bit data
+}
+
+void USART_Transmit(unsigned char data) {
+    while (!(UCSR0A & (1 << UDRE0))); // Wait for empty transmit buffer
+    UDR0 = data; // Put data into buffer, sends the data
+}
+
+void USART_SendString(const char *str) {
+    while (*str) {
+        USART_Transmit(*str++);
+    }
+>>>>>>> Stashed changes
 }
 
 void ADC_Init() {
-	// Set reference voltage to AVcc (5V) and select ADC0
-	ADMUX = (1 << REFS0);
-
-	// Enable ADC, set prescaler to 128 for 125 kHz ADC clock, enable ADC interrupt
-	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) | (1 << ADIE);
+    ADMUX = (1 << REFS0);  // Set reference voltage to AVcc (5V), select ADC0
+    ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);  // Enable ADC, prescaler 128
 }
 
+<<<<<<< Updated upstream
 uint16_t ADC_Read() {
 	ADCSRA |= (1 << ADSC);  // Start ADC conversion
 	while (ADCSRA & (1 << ADSC));  // Wait for conversion to finish
@@ -131,5 +150,53 @@ int main(void) {
 		//adc_param = adc_value / 8;  // Scale down from 1023 to 127
 
 	}
+=======
+void Send_ADC_Value(uint8_t value) {
+    snprintf(buffer, sizeof(buffer), "ADC Value: %u\r\n", value);  // Format the ADC value
+    USART_SendString(buffer);  // Send the formatted string over UART
+	_delay_ms(500);
 }
 
+void Volume_Command(unsigned char parameter) {
+    uint8_t packet[] = {0xAA, 0x00, 0x07, 0x23, 0x00, 0x01, 0x03, parameter, 0x00, 0x00};
+
+    // Calculate and set checksum
+    packet[9] = ~(packet[0] + packet[1] + packet[2] + packet[3] +
+                  packet[4] + packet[5] + packet[6] + packet[7]) + 1;
+
+    // Transmit the packet over UART
+    for (int i = 0; i < 10; i++) {
+        USART_Transmit(packet[i]);
+    }
+}
+
+uint16_t ADC_Read() {
+    ADCSRA |= (1 << ADSC);  // Start ADC conversion
+    while (ADCSRA & (1 << ADSC));  // Wait for conversion to finish
+    return ADC;  // Return ADC result
+}
+
+ISR(ADC_vect) {
+    adc_value = ADC_Read();  // Read the ADC value
+    adc_param = adc_value / 8;  // Scale down from 1023 to 127
+
+    // Check if the volume has changed by at least 2
+    if (abs(adc_param - last_adc_param) >= 2) {
+        //Volume_Command(adc_param); // Send volume change command
+        last_adc_param = adc_param; // Update last known value
+    }
+
+    // Send the ADC value to PuTTY
+    Send_ADC_Value(adc_param);
+}
+
+int main(void) {
+    USART_Init(BAUDRATE);  
+    ADC_Init();         
+    sei();                 // Enable global interrupts
+
+    while (1) {
+        // You can initiate ADC conversion manually if needed
+    }
+>>>>>>> Stashed changes
+}

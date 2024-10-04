@@ -7,6 +7,7 @@
 #define POWER_OFF_PIN PD3               // Pin for powering off
 #define LED_POWER_PIN PB5               // Atmega LED
 #define MFB PB0                        	       // Pin to control MFB for BM83
+#define DEBOUNCE_DELAY_MS 50
 
 #define F_CPU 8000000UL 
 #define BAUD 38400
@@ -23,6 +24,28 @@ void USART_Init(unsigned int BAUD1) {
     UBRR0L = (unsigned char)BAUD1;
     UCSR0B = (1 << TXEN0) | (1 << RXEN0);
     UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);         // 8-bit data
+}
+
+void Power_Init(void) {
+    DDRB |= (1 << LED_POWER_PIN);       // Output
+    PORTB &= ~(1 << LED_POWER_PIN);     // Initialize OFF
+
+    //DDRB |= (1 << MFB);                 // Set PB0 as output
+
+    // Power on pin
+    DDRD &= ~(1 << POWER_ON_PIN);       // Input
+    PORTD |= (1 << POWER_ON_PIN);       // Enable pull-up
+
+    // Power off pin
+    DDRD &= ~(1 << POWER_OFF_PIN);      // Input
+    PORTD |= (1 << POWER_OFF_PIN);      // Enable pull-up
+
+    // External interrupts configuration
+    EICRA |= (1 << ISC01) | (1 << ISC00);  // Trigger on rising edge for INT0 (power on)
+    EIMSK |= (1 << INT0);               // Enable INT0 for power on
+
+    EICRA |= (1 << ISC11) | (1 << ISC10);  // Trigger on rising edge for INT1 (power off)
+    EIMSK |= (1 << INT1); 
 }
 
 void USART_Transmit(unsigned char data) {
@@ -48,7 +71,6 @@ void BM83_Send_Power_Command(uint8_t opcode, uint8_t parameter1, uint8_t paramet
 }
 
 void BM83_Power_On(void) {
-    //PORTB |= (1 << MFB);
     BM83_Send_Power_Command(0x02, 0x00, 0x51); //power on commands
     _delay_ms(20);
     BM83_Send_Power_Command(0x02, 0x00, 0x52);
@@ -60,7 +82,6 @@ void BM83_Power_Off(void) {
     _delay_ms(20);
     BM83_Send_Power_Command(0x02, 0x00, 0x54);
     _delay_ms(20);  
-   //PORTB &= ~(1 << MFB);
 }
 
 void turn_on_LED() {
@@ -71,39 +92,24 @@ void turn_off_LED() {
     PORTB &= ~(1 << LED_POWER_PIN); // Turn off LED
 }
 
-void Power_Init(void) {
-    DDRB |= (1 << LED_POWER_PIN);       // Output
-    PORTB &= ~(1 << LED_POWER_PIN);     // Initialize OFF
-
-    DDRB |= (1 << MFB);                 // Set PB0 as output
-
-    // Power on pin
-    DDRD &= ~(1 << POWER_ON_PIN);       // Input
-    PORTD |= (1 << POWER_ON_PIN);       // Enable pull-up
-
-    // Power off pin
-    DDRD &= ~(1 << POWER_OFF_PIN);      // Input
-    PORTD |= (1 << POWER_OFF_PIN);      // Enable pull-up
-
-    // External interrupts configuration
-    EICRA |= (1 << ISC01) | (1 << ISC00);  // Trigger on rising edge for INT0 (power on)
-    EIMSK |= (1 << INT0);                   // Enable INT0 for power on
-
-    EICRA |= (1 << ISC11);                 // Trigger on falling edge for INT1 (power off)
-    EICRA &= ~(1 << ISC10);                
-    EIMSK |= (1 << INT1); 
-}
-
 ISR(INT0_vect) { 
-    currentState = POWER_ON;
-    turn_on_LED();
-    BM83_Power_On();
+    _delay_ms(DEBOUNCE_DELAY_MS);   // Wait for signal to stabilize
+    if (PIND & (1 << POWER_ON_PIN)) // Check if it's still in the expected state
+    {
+        currentState = POWER_ON;
+        turn_on_LED();
+        BM83_Power_On();
+    }
 }
 
 ISR(INT1_vect) { 
-    currentState = POWER_OFF;
-    turn_off_LED();
-    BM83_Power_Off();
+    _delay_ms(DEBOUNCE_DELAY_MS);   // Wait for signal to stabilize
+    if (PIND & (1 << POWER_OFF_PIN)) // Check if it's still in the expected state
+    {
+        currentState = POWER_OFF;
+        turn_off_LED();
+        BM83_Power_Off();
+    }
 }
 
 int main(void) {
