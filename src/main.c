@@ -1,68 +1,69 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <util/delay.h>
+#include <avr/sleep.h>
 #include <stdio.h>
 #include <util/delay.h>
-#include <stdlib.h>
 
-<<<<<<< Updated upstream
+#define POWER_ON_PIN PD2                // Pin for powering on
+#define POWER_OFF_PIN PD3               // Pin for powering off
+#define LED_POWER_PIN PB5               // Atmega LED
+//#define LED_BUTTON_PIN PD6              // Second LED for button press indication
+#define BUTTON_PIN PB7                  // Button pin for triggering pairing
+#define MFB PB0                        	       // Pin to control MFB for BM83
+#define DEBOUNCE_DELAY_MS 50
+
 #define F_CPU 8000000UL
 #define BAUD 38400
-=======
-#define F_CPU 16000000UL
-#define BAUD 9600
->>>>>>> Stashed changes
 #define BAUDRATE ((F_CPU) / (BAUD * 16UL) - 1)
 
 volatile uint8_t adc_param = 0;         // Scaled volume parameter
 volatile uint8_t last_adc_param = 0;    // Store last volume value
 volatile uint16_t adc_value = 0;        // Store ADC result
-<<<<<<< Updated upstream
 char buffer[10];
 
-// Initialize UART
-void USART_Init(unsigned int baud) {
-	UBRR0H = (unsigned char)(baud >> 8);   // Set baud rate
-	UBRR0L = (unsigned char)baud;
-	UCSR0B = (1 << TXEN0 | (1 << RXEN0) | (1 << RXCIE0));  // Enable transmitter
-	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);  // 8-bit data
-=======
-char buffer[15];
+typedef enum {
+	POWER_OFF,
+	POWER_ON
+} PowerState;
+PowerState currentState = POWER_OFF;
 
 void USART_Init(unsigned int BAUD1) {
-    UBRR0H = (unsigned char)(BAUD1 >> 8);
-    UBRR0L = (unsigned char)BAUD1;
-    UCSR0B = (1 << TXEN0) | (1 << RXEN0); // Enable RX Complete Interrupt
-    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00); // 8-bit data
+	UBRR0H = (unsigned char)(BAUD1 >> 8);
+	UBRR0L = (unsigned char)BAUD1;
+	UCSR0B = (1 << TXEN0) | (1 << RXEN0);
+	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);         // 8-bit data
 }
 
-void USART_Transmit(unsigned char data) {
-    while (!(UCSR0A & (1 << UDRE0))); // Wait for empty transmit buffer
-    UDR0 = data; // Put data into buffer, sends the data
-}
+void Power_Init(void) {
+	DDRB |= (1 << LED_POWER_PIN);       // Output
+	PORTB &= ~(1 << LED_POWER_PIN);     // Initialize OFF
 
-void USART_SendString(const char *str) {
-    while (*str) {
-        USART_Transmit(*str++);
-    }
->>>>>>> Stashed changes
+	//DDRB |= (1 << MFB);                 // Set PB0 as output
+
+	// Power on pin
+	DDRD &= ~(1 << POWER_ON_PIN);       // Input
+	PORTD |= (1 << POWER_ON_PIN);       // Enable pull-up
+
+	// Power off pin
+	DDRD &= ~(1 << POWER_OFF_PIN);      // Input
+	PORTD |= (1 << POWER_OFF_PIN);      // Enable pull-up
+
+	// External interrupts configuration
+	EICRA |= (1 << ISC01) | (1 << ISC00);  // Trigger on rising edge for INT0 (power on)
+	EIMSK |= (1 << INT0);               // Enable INT0 for power on
+
+	EICRA |= (1 << ISC11) | (1 << ISC10);  // Trigger on rising edge for INT1 (power off)
+	EIMSK |= (1 << INT1);
 }
 
 void ADC_Init() {
-    ADMUX = (1 << REFS0);  // Set reference voltage to AVcc (5V), select ADC0
-    ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);  // Enable ADC, prescaler 128
-}
-
-<<<<<<< Updated upstream
-uint16_t ADC_Read() {
-	ADCSRA |= (1 << ADSC);  // Start ADC conversion
-	while (ADCSRA & (1 << ADSC));  // Wait for conversion to finish
-	return ADC;
+	ADMUX = (1 << REFS0);  // Set reference voltage to AVcc (5V), select ADC0
+	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0) | (1 << ADIE);  // Enable ADC, prescaler 128
 }
 
 void USART_Transmit(unsigned char data) {
-	while (!(UCSR0A & (1 << UDRE0)));  // Wait for empty transmit buffer
-	UDR0 = data;  // Put data into buffer, sends the data
+	while (!(UCSR0A & (1 << UDRE0)));               // Wait for empty transmit buffer
+	UDR0 = data;                                    // Put data into buffer, sends the data
 }
 
 unsigned char USART_Receive(void) {
@@ -70,33 +71,8 @@ unsigned char USART_Receive(void) {
 	return UDR0;                                    // Get and return received data from buffer
 }
 
-/*void USART_SendString(const char *str) {
-	while (*str) {
-		USART_Transmit(*str++);
-	}
-}
-*/
-
-/*
-void Volume_Command(unsigned char parameter) {
-	uint8_t packet[] = {0xAA, 0x00, 0x07, 0x23, 0x00, 0x01, 0x03, parameter, 0x00, 0x00, 0x00};
-
-	// Calculate and set checksum
-	packet[10] = ~(packet[1] + packet[2] + packet[3] + packet[4] + 
-				packet[5] + packet[6] + packet[7] + packet[8]+ packet[9]) + 1;
-
-	for (int i = 0; i < 10; i++) {
-		USART_Transmit(packet[i]);
-	}
-}*/
-
-void storeEvent(void)
-{
-	uint8_t bucket = USART_Receive();
-}
-
-void BM83_SendCommand(uint8_t parameter) {
-	uint8_t packet[] = {0xAA, 0x00, 0x03, 0x02, 0x00, parameter, 0x00};
+void BM83_Send_Power_Command(uint8_t opcode, uint8_t parameter1, uint8_t parameter2) {
+	uint8_t packet[] = {0xAA, 0x00, 0x03, opcode, parameter1, parameter2, 0x00};
 
 	// Calculate and set checksum
 	packet[6] = ~(packet[1] + packet[2] + packet[3] + packet[4] + packet[5]) + 1;
@@ -107,96 +83,125 @@ void BM83_SendCommand(uint8_t parameter) {
 	}
 }
 
-void sendAck(void)
-{
-	uint8_t ack[] = {0xAA, 0x00, 0x02, 0x14, 0x00, 0xC0};
-
-	for (uint8_t i = 0; i < sizeof(ack); i++) {
-		USART_Transmit(ack[i]);
+void USART_SendString(const char *str) {
+	while (*str) {
+		USART_Transmit(*str++);
 	}
-	return;
 }
 
-void BM83_Init(void) {
-	BM83_SendCommand(0x51); //power on commands
+void BM83_Power_On(void) {
+	BM83_Send_Power_Command(0x02, 0x00, 0x51); //power on commands
 	_delay_ms(20);
-	BM83_SendCommand(0x52);
+	BM83_Send_Power_Command(0x02, 0x00, 0x52);
 	_delay_ms(20);
 }
-	
-/*ISR(ADC_vect) {
+
+void BM83_Power_Off(void) {
+	BM83_Send_Power_Command(0x02, 0x00, 0x53);
+	_delay_ms(20);
+	BM83_Send_Power_Command(0x02, 0x00, 0x54);
+	_delay_ms(20);
+}
+
+void turn_on_LED() {
+	PORTB |= (1 << LED_POWER_PIN); // Turn on LED
+}
+
+void turn_off_LED() {
+	PORTB &= ~(1 << LED_POWER_PIN); // Turn off LED
+}
+
+// Function to trigger Bluetooth pairing mode on the BM83 after button has been pressed
+void trigger_bluetooth_pairing() {
+	if (currentState == POWER_ON){
+		BM83_Send_Power_Command(0x02, 0x00, 0x5D);
+		_delay_ms(20);
+	}
+}
+
+// Function to initialize the GPIO for the button
+void initialize_gpio() {
+	DDRB &= ~(1 << BUTTON_PIN);  // Set BUTTON_PIN (PB7) as input
+	PORTB |= (1 << BUTTON_PIN);  // Enable pull-up resistor on BUTTON_PIN
+
+	// Enable interrupt on falling edge (button press)
+	PCICR |= (1 << PCIE0);   // Enable Pin Change Interrupts for PCINT[7:0]
+	PCMSK0 |= (1 << PCINT7); // Enable PCINT7 (PB7) to trigger interrupt
+}
+
+uint16_t ADC_Read() {
+	ADCSRA |= (1 << ADSC);  // Start ADC conversion
+	while (ADCSRA & (1 << ADSC));  // Wait for conversion to finish
+	return ADC;  // Return ADC result
+}
+
+void Volume_Command(unsigned char parameter) {
+	uint8_t packet[] = {0xAA, 0x00, 0x07, 0x23, 0x00, 0x01, 0x04, parameter, 0x00, 0x00, 0x00};
+
+	// Calculate and set checksum
+	packet[10] = ~(packet[1] + packet[2] + packet[3] + packet[4] +
+	packet[5] + packet[6] + packet[7] + packet[8]+ packet[9]) + 1;
+
+	for (int i = 0; i < sizeof(packet); i++) {
+		USART_Transmit(packet[i]);
+	}
+}
+
+ISR(ADC_vect) {
 	// Check if the volume has changed by at least 1
 	if (adc_param >= last_adc_param + 2 || adc_param <= last_adc_param - 2) {
 		Volume_Command(adc_param); // Send volume change command
 		last_adc_param = adc_param; // Update last known value
 	}
-}*/
+}
 
-ISR(USART0_RX_vect)
-{
-	storeEvent();
+// ISR for button press on PB7
+ISR(PCINT0_vect) {
+	// Check if PB7 caused the interrupt (button press)
+	if (!(PINB & (1 << BUTTON_PIN))) {
+		trigger_bluetooth_pairing();  // Trigger pairing when the button is pressed
+		turn_on_LED();  // Turn on button LED to indicate button press
+
+		// Simple delay to avoid multiple triggers during button bounce
+		_delay_ms(50);
+		
+		// Wait for button release before allowing another interrupt
+		while (!(PINB & (1 << BUTTON_PIN)));
+	}
+}
+
+//might need to switch interrupt 1 and interrupt 0
+
+ISR(INT0_vect) {
+	_delay_ms(DEBOUNCE_DELAY_MS);   // Wait for signal to stabilize
+	if (PIND & (1 << POWER_ON_PIN)) // Check if it's still in the expected state
+	{
+		currentState = POWER_ON;
+		//turn_on_LED();
+		BM83_Power_On();
+	}
+}
+
+ISR(INT1_vect) {
+	_delay_ms(DEBOUNCE_DELAY_MS);   // Wait for signal to stabilize
+	if (PIND & (1 << POWER_OFF_PIN)) // Check if it's still in the expected state
+	{
+		currentState = POWER_OFF;
+		//turn_off_LED();
+		BM83_Power_Off();
+	}
 }
 
 int main(void) {
-	USART_Init(BAUDRATE);  // Initialize UART
-	ADC_Init();  // Initialize ADC
+	USART_Init(BAUDRATE);                   //Initalize Baudrate with USART
+	Power_Init();                           //Initalize LED, pins, and interrupts
+	initialize_gpio();
+	ADC_Init();
 	
 	sei();
-	BM83_Init();
 
 	while (1) {
-		
-		//adc_value = ADC_Read();
-		//adc_param = adc_value / 8;  // Scale down from 1023 to 127
-
+		adc_value = ADC_Read();
+		adc_param = adc_value / 8;  // Scale down from 1023 to 127
 	}
-=======
-void Send_ADC_Value(uint8_t value) {
-    snprintf(buffer, sizeof(buffer), "ADC Value: %u\r\n", value);  // Format the ADC value
-    USART_SendString(buffer);  // Send the formatted string over UART
-	_delay_ms(500);
-}
-
-void Volume_Command(unsigned char parameter) {
-    uint8_t packet[] = {0xAA, 0x00, 0x07, 0x23, 0x00, 0x01, 0x03, parameter, 0x00, 0x00};
-
-    // Calculate and set checksum
-    packet[9] = ~(packet[0] + packet[1] + packet[2] + packet[3] +
-                  packet[4] + packet[5] + packet[6] + packet[7]) + 1;
-
-    // Transmit the packet over UART
-    for (int i = 0; i < 10; i++) {
-        USART_Transmit(packet[i]);
-    }
-}
-
-uint16_t ADC_Read() {
-    ADCSRA |= (1 << ADSC);  // Start ADC conversion
-    while (ADCSRA & (1 << ADSC));  // Wait for conversion to finish
-    return ADC;  // Return ADC result
-}
-
-ISR(ADC_vect) {
-    adc_value = ADC_Read();  // Read the ADC value
-    adc_param = adc_value / 8;  // Scale down from 1023 to 127
-
-    // Check if the volume has changed by at least 2
-    if (abs(adc_param - last_adc_param) >= 2) {
-        //Volume_Command(adc_param); // Send volume change command
-        last_adc_param = adc_param; // Update last known value
-    }
-
-    // Send the ADC value to PuTTY
-    Send_ADC_Value(adc_param);
-}
-
-int main(void) {
-    USART_Init(BAUDRATE);  
-    ADC_Init();         
-    sei();                 // Enable global interrupts
-
-    while (1) {
-        // You can initiate ADC conversion manually if needed
-    }
->>>>>>> Stashed changes
 }
