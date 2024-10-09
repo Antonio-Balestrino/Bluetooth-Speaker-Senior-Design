@@ -6,7 +6,6 @@
 #define POWER_ON_PIN PD2                // Pin for powering on
 #define POWER_OFF_PIN PD3               // Pin for powering off
 #define LED_POWER_PIN PB5               // Atmega LED
-//#define LED_BUTTON_PIN PD6              // Second LED for button press indication
 #define BUTTON_PIN PB7                  // Button pin for triggering pairing
 #define MFB PB0                        	       // Pin to control MFB for BM83
 #define DEBOUNCE_DELAY_MS 50
@@ -117,6 +116,7 @@ ISR(PCINT0_vect) {
 	// Check if PB7 caused the interrupt (button press)
 	if (!(PINB & (1 << BUTTON_PIN))) {
 		trigger_bluetooth_pairing();  // Trigger pairing when the button is pressed
+		_delay_ms(20);  // Delay to make sure command is processed
 		turn_on_LED();  // Turn on button LED to indicate button press
 
 		// Simple delay to avoid multiple triggers during button bounce
