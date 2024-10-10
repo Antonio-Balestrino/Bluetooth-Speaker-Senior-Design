@@ -1,4 +1,4 @@
-23787691698206504
+23791147774107818
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -96529,6 +96529,20 @@ CONN_1935776_PXC
 0
 2
 2
+Z_Custom_Footprints
+ICE_Header
+<b>WR-BHD</B> <BR>2.54 mm Male Box Header, 6 Pins
+
+0
+6
+6
+Z_Custom_Footprints
+LF353
+
+
+0
+8
+8
 Z_Custom_Footprints
 POT_3362P
 
