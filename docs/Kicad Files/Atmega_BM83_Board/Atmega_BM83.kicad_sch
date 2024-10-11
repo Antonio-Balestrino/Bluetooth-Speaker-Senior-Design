@@ -5080,7 +5080,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm"
 			(at 120.65 101.2952 0)
 			(effects
 				(font
@@ -5215,7 +5215,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm"
 			(at 140.97 119.0752 0)
 			(effects
 				(font
@@ -5351,7 +5351,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm"
 			(at 163.5252 43.18 0)
 			(effects
 				(font
@@ -5985,7 +5985,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm"
 			(at 69.85 101.9048 0)
 			(effects
 				(font
@@ -6387,7 +6387,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Z_Custom_Footprints:ICE_Header"
+		(property "Footprint" "Custom_Footprints:ICE_Header"
 			(at 267.97 99.06 0)
 			(effects
 				(font
@@ -6754,7 +6754,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal"
 			(at 238.76 25.4 0)
 			(effects
 				(font
@@ -7217,7 +7217,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100"
 			(at 265.176 42.418 0)
 			(effects
 				(font
@@ -7454,28 +7454,28 @@
 			)
 		)
 		(pin "2"
-			(uuid "5c7559d7-9c43-48e7-a71b-2f0907fbed2d")
+			(uuid "5c7559d7-9c43-48e7-a71b-2f0907fbed2e")
 		)
 		(pin "6"
-			(uuid "f6f53aea-1e66-4d4c-b921-d8fd7fb51403")
+			(uuid "f6f53aea-1e66-4d4c-b921-d8fd7fb51404")
 		)
 		(pin "5"
-			(uuid "3782b883-7fd4-4a2c-abcb-094daeccb4d9")
+			(uuid "3782b883-7fd4-4a2c-abcb-094daeccb4da")
 		)
 		(pin "1"
-			(uuid "cc3ce4f1-b195-4384-bc0b-2ee77b4660ab")
+			(uuid "cc3ce4f1-b195-4384-bc0b-2ee77b4660ac")
 		)
 		(pin "3"
-			(uuid "ac1f40b3-8cc2-440b-96ef-ee610ed0d57a")
+			(uuid "ac1f40b3-8cc2-440b-96ef-ee610ed0d57b")
 		)
 		(pin "7"
-			(uuid "3c623692-4290-4d10-ba6b-2e336c125419")
+			(uuid "3c623692-4290-4d10-ba6b-2e336c12541a")
 		)
 		(pin "4"
-			(uuid "2aad9204-eb64-497c-9684-981dfaadc387")
+			(uuid "2aad9204-eb64-497c-9684-981dfaadc388")
 		)
 		(pin "8"
-			(uuid "b1c9d0ba-ae27-47b4-b917-ef14e1a8192a")
+			(uuid "b1c9d0ba-ae27-47b4-b917-ef14e1a8192b")
 		)
 		(instances
 			(project ""
@@ -7672,28 +7672,28 @@
 			)
 		)
 		(pin "2"
-			(uuid "5c7559d7-9c43-48e7-a71b-2f0907fbed2d")
+			(uuid "5c7559d7-9c43-48e7-a71b-2f0907fbed2f")
 		)
 		(pin "6"
-			(uuid "f6f53aea-1e66-4d4c-b921-d8fd7fb51403")
+			(uuid "f6f53aea-1e66-4d4c-b921-d8fd7fb51405")
 		)
 		(pin "5"
-			(uuid "3782b883-7fd4-4a2c-abcb-094daeccb4d9")
+			(uuid "3782b883-7fd4-4a2c-abcb-094daeccb4db")
 		)
 		(pin "1"
-			(uuid "cc3ce4f1-b195-4384-bc0b-2ee77b4660ab")
+			(uuid "cc3ce4f1-b195-4384-bc0b-2ee77b4660ad")
 		)
 		(pin "3"
-			(uuid "ac1f40b3-8cc2-440b-96ef-ee610ed0d57a")
+			(uuid "ac1f40b3-8cc2-440b-96ef-ee610ed0d57c")
 		)
 		(pin "7"
-			(uuid "3c623692-4290-4d10-ba6b-2e336c125419")
+			(uuid "3c623692-4290-4d10-ba6b-2e336c12541b")
 		)
 		(pin "4"
-			(uuid "2aad9204-eb64-497c-9684-981dfaadc387")
+			(uuid "2aad9204-eb64-497c-9684-981dfaadc389")
 		)
 		(pin "8"
-			(uuid "b1c9d0ba-ae27-47b4-b917-ef14e1a8192a")
+			(uuid "b1c9d0ba-ae27-47b4-b917-ef14e1a8192c")
 		)
 		(instances
 			(project ""
@@ -7796,7 +7796,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm"
 			(at 212.09 38.4048 0)
 			(effects
 				(font
@@ -7865,7 +7865,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm"
 			(at 124.7648 45.72 0)
 			(effects
 				(font
@@ -8063,7 +8063,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100"
 			(at 276.606 42.418 0)
 			(effects
 				(font
