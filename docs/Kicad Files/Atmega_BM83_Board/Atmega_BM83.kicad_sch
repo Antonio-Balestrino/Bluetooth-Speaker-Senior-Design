@@ -4,6 +4,9 @@
 	(generator_version "8.0")
 	(uuid "b3cfe92d-97c3-48fc-9671-6e68a58d7c48")
 	(paper "A4")
+	(title_block
+		(title "BM83/MC Module")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TL082"
 			(pin_names
@@ -3121,6 +3124,14 @@
 		(uuid "9acc8a3d-9ec2-4e80-90eb-e62e2f423b3f")
 	)
 	(no_connect
+		(at 210.82 54.61)
+		(uuid "9f0031f7-019a-4f36-82a1-857b9e106d99")
+	)
+	(no_connect
+		(at 233.68 138.43)
+		(uuid "a0407967-8d17-42e6-82f8-3af3cb9d68d5")
+	)
+	(no_connect
 		(at 255.27 125.73)
 		(uuid "a37cd4c0-ca5b-4291-a15a-ac373720572a")
 	)
@@ -3356,7 +3367,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 30.48) (xy 228.6 105.41)
+			(xy 229.87 30.48) (xy 229.87 105.41)
 		)
 		(stroke
 			(width 0)
@@ -3476,7 +3487,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 102.87) (xy 226.06 102.87)
+			(xy 210.82 102.87) (xy 224.79 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3506,7 +3517,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 30.48) (xy 226.06 102.87)
+			(xy 224.79 30.48) (xy 224.79 102.87)
 		)
 		(stroke
 			(width 0)
@@ -4016,7 +4027,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 105.41) (xy 228.6 105.41)
+			(xy 210.82 105.41) (xy 229.87 105.41)
 		)
 		(stroke
 			(width 0)
@@ -4384,28 +4395,6 @@
 		(uuid "08438e84-b7af-402a-91eb-f887496c1928")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 223.8441 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "PWRMFB"
-		(shape input)
-		(at 210.82 54.61 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0d52f0c9-b593-4387-b923-dddd8d2e015b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.6066 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4890,28 +4879,6 @@
 		(uuid "d9ef9649-f7c9-4e2f-a4b9-73fa4dfc7642")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.59 35.7633 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "PWRMFB"
-		(shape input)
-		(at 233.68 138.43 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ec9538dd-8064-49c7-b6b4-30756ea44dfa")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.8934 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5520,6 +5487,78 @@
 			(project "Atmega_BM83"
 				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
 					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 227.33 25.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22157f42-b174-4e92-b554-5b5eff83a860")
+		(property "Reference" "J3"
+			(at 224.282 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "PWR SW"
+			(at 220.726 20.574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal"
+			(at 227.33 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 227.33 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 227.33 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2af00872-8918-4c16-84f2-e3f82a878bb3")
+		)
+		(pin "2"
+			(uuid "929a6a34-0eb4-4b86-877f-7d7f8bf26c4b")
+		)
+		(pin "3"
+			(uuid "fe724ee2-7041-4841-ace6-640b7eea54b6")
+		)
+		(instances
+			(project "Atmega_BM83"
+				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -7487,73 +7526,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 226.06 25.4 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bc8cc544-676c-4298-8018-c88c208f5e74")
-		(property "Reference" "J3"
-			(at 223.774 23.114 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR SW"
-			(at 226.314 20.574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
-			(at 226.06 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 226.06 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 226.06 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "156c6d3a-82cf-49c3-8d71-c0e63a664890")
-		)
-		(pin "2"
-			(uuid "02eaa4dc-b88e-4008-b673-a1c7d2c5a4ab")
-		)
-		(instances
-			(project "Atmega_BM83"
-				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 217.17 125.73 0)
 		(unit 1)
@@ -8674,6 +8646,72 @@
 			(project "Atmega_BM83"
 				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 227.33 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f5ce755d-1b19-450a-af97-7f18a663d659")
+		(property "Reference" "#PWR014"
+			(at 227.33 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 227.33 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 227.33 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d885711-2ac3-4a5a-af52-f649312a603c")
+		)
+		(instances
+			(project "Atmega_BM83"
+				(path "/b3cfe92d-97c3-48fc-9671-6e68a58d7c48"
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
