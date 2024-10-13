@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 31,
+    "active_layer": 47,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -65,7 +65,7 @@
       39,
       40
     ],
-    "visible_layers": "801f1f0_ffffffff",
+    "visible_layers": "809f1f0_ffffffff",
     "zone_display_mode": 0
   },
   "git": {
@@ -75,7 +75,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Power_Amp_RevA.kicad_prl",
+    "filename": "Power_Amp_RevB.kicad_prl",
     "version": 3
   },
   "project": {
