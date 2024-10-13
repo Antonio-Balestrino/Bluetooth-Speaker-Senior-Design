@@ -1,0 +1,99 @@
+
+(rules PCB Atmega_BM83
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 584)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clear 200.0)
+    (clear 100.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:300_um-Analog" "Via[0-1]_600:300_um" Analog
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um-kicad_default"
+  )
+  (via_rule
+    Analog "Via[0-1]_600:300_um-Analog"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "Net-(C1-Pad2)" AOHPR "Net-(J2-Pin_1)" "Net-(C2-Pad2)" "Net-(C3-Pad2)" "Net-(J2-Pin_2)" 8V
+    18V 5V "Net-(U3-AVCC)" "Net-(J3-Pin_1)" "Net-(J3-Pin_3)" "Net-(J4-Pin_2)" "Net-(J5-Pin_1)" "Net-(J6-Pin_1)"
+    "Net-(J7-Pin_1)" /AIR "unconnected-(J8-Pin_4-Pad4)" "unconnected-(J8-Pin_12-Pad12)" AOHPM "/P3_2" "unconnected-(J8-Pin_3-Pad3)" "/SYS_PWR"
+    "unconnected-(J8-Pin_9-Pad9)" /AIL "unconnected-(J9-Pin_11-Pad11)" "/RST_IN" "/P3_4{slash}UART_RTS" "BM83 Rx" "unconnected-(J9-Pin_8-Pad8)" "BM83 Tx"
+    "unconnected-(J9-Pin_5-Pad5)" "/P2_7" "unconnected-(J9-Pin_12-Pad12)" "unconnected-(J9-Pin_6-Pad6)" "/P0_5" "Net-(U4A--)" "Net-(U4B--)" "Atmega Tx"
+    "Net-(U3-PB1)" "Net-(U3-PB2)" "unconnected-(U3-PD6-Pad12)" "unconnected-(U3-PC4-Pad27)" "Atmega TX" "unconnected-(U3-PD5-Pad11)" {slash}RESET "unconnected-(U3-PC2-Pad25)"
+    MISO SCK "unconnected-(U3-PD4-Pad6)" "unconnected-(U3-PD7-Pad13)" "unconnected-(U3-AREF-Pad21)" "unconnected-(U3-XTAL1{slash}PB6-Pad9)" "unconnected-(U3-PB0-Pad14)" "unconnected-(U3-PC5-Pad28)"
+    MOSI "unconnected-(U3-PC3-Pad26)" "unconnected-(U3-PC1-Pad24)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Analog
+    (clearance_class Analog)
+    (via_rule Analog)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
