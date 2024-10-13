@@ -75,9 +75,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "E:/Tristan/GitHub/Bluetooth-Speaker-Senior-Design/docs/Kicad Files/Atmega_BM83_Board/Gerber_Files/")
 		)
 	)
 	(net 0 "")
@@ -12598,7 +12598,7 @@
 			(xy 50.8 160.02) (xy 165.1 160.02)
 		)
 		(height 5.079999)
-		(gr_text "4.5000 in"
+		(gr_text "114.3000 mm"
 			(at 107.95 163.299999 0)
 			(layer "Cmts.User")
 			(uuid "548b9cd2-f0a8-43f3-935e-3901005d418b")
@@ -12631,7 +12631,7 @@
 			(xy 45.72 63.5) (xy 45.72 152.4)
 		)
 		(height 5.08)
-		(gr_text "3.5000 in"
+		(gr_text "88.9000 mm"
 			(at 38.84 107.95 90)
 			(layer "Cmts.User")
 			(uuid "e2d85a4b-7426-4134-82bb-93ef418ec143")
