@@ -5,7 +5,9 @@
 	(uuid "b3cfe92d-97c3-48fc-9671-6e68a58d7c48")
 	(paper "A4")
 	(title_block
-		(title "BM83/MC Module")
+		(title "BT/MC Module")
+		(date "2024-10-13")
+		(rev "A")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TL082"
