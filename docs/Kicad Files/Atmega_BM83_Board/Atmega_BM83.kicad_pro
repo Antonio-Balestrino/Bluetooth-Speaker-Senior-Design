@@ -468,7 +468,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 1.0,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -478,9 +478,9 @@
         "name": "Analog",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "track_width": 1.0,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
         "wire_width": 6
       }
     ],
@@ -503,19 +503,20 @@
       "Net-(U4A--)": "rgb(255, 248, 9)",
       "Net-(U4B--)": "rgb(237, 255, 19)"
     },
-    "netclass_assignments": {
-      "18V": "18V",
-      "5V": "5V",
-      "8V": "8V"
-    },
-    "netclass_patterns": []
+    "netclass_assignments": null,
+    "netclass_patterns": [
+      {
+        "netclass": "Analog",
+        "pattern": "18V, 5V, 8V"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "E:/Tristan/GitHub/Bluetooth-Speaker-Senior-Design/docs/Kicad Files/Atmega_BM83_Board/Gerber_Files/",
+      "plot": "E:/Tristan/GitHub/Bluetooth-Speaker-Senior-Design/docs/Kicad Files/Atmega_BM83_Board/Mark_suggestion/Gerber_Files/",
       "pos_files": "",
       "specctra_dsn": "Autorouting/Atmega_BM83.dsn",
       "step": "",
