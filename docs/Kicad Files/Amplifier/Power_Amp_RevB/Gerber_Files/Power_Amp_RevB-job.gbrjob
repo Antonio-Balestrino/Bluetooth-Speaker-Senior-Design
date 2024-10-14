@@ -5,16 +5,16 @@
       "Application": "Pcbnew",
       "Version": "8.0.5"
     },
-    "CreationDate": "2024-09-18T11:17:40-07:00"
+    "CreationDate": "2024-10-14T07:35:35-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "Power_Amp_RevA",
-      "GUID": "506f7765-725f-4416-9d70-5f526576412e",
+      "Name": "Power_Amp_RevB",
+      "GUID": "506f7765-725f-4416-9d70-5f526576422e",
       "Revision": "A"
     },
     "Size": {
-      "X": 152.93,
+      "X": 177.6492,
       "Y": 76.4
     },
     "LayerNumber": 2,
@@ -34,32 +34,37 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "Power_Amp_RevA-F_Cu.gbr",
+      "Path": "Power_Amp_RevB-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Power_Amp_RevA-B_Cu.gbr",
+      "Path": "Power_Amp_RevB-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Power_Amp_RevA-F_Silkscreen.gbr",
+      "Path": "Power_Amp_RevB-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Power_Amp_RevA-F_Mask.gbr",
+      "Path": "Power_Amp_RevB-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Power_Amp_RevB-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "Power_Amp_RevA-B_Mask.gbr",
+      "Path": "Power_Amp_RevB-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "Power_Amp_RevA-Edge_Cuts.gbr",
+      "Path": "Power_Amp_RevB-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
