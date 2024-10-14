@@ -47,16 +47,19 @@ void Power_Init(void) {
 
 	EICRA |= (1 << ISC11) | (1 << ISC10);  // Trigger on rising edge for INT1 (power off)
 	EIMSK |= (1 << INT1);
+
+	// Initialize button
+	DDRB &= ~(1 << BUTTON_PIN);  // Set BUTTON_PIN (PB7) as input
+	PORTB |= (1 << BUTTON_PIN);  // Enable pull-up resistor on BUTTON_PIN
+
+	// Enable interrupt on falling edge (button press)
+	PCICR |= (1 << PCIE0);   // Enable Pin Change Interrupts for PCINT[7:0]
+	PCMSK0 |= (1 << PCINT7); // Enable PCINT7 (PB7) to trigger interrupt
 }
 
 void USART_Transmit(unsigned char data) {
 	while (!(UCSR0A & (1 << UDRE0)));               // Wait for empty transmit buffer
 	UDR0 = data;                                    // Put data into buffer, sends the data
-}
-
-unsigned char USART_Receive(void) {
-	while (!(UCSR0A & (1 << RXC0)));                // Wait for data to be received
-	return UDR0;                                    // Get and return received data from buffer
 }
 
 void BM83_Send_Power_Command(uint8_t opcode, uint8_t parameter1, uint8_t parameter2) {
@@ -101,35 +104,17 @@ void trigger_bluetooth_pairing() {
 	}
 }
 
-// Function to initialize the GPIO for the button
-void initialize_gpio() {
-	DDRB &= ~(1 << BUTTON_PIN);  // Set BUTTON_PIN (PB7) as input
-	PORTB |= (1 << BUTTON_PIN);  // Enable pull-up resistor on BUTTON_PIN
-
-	// Enable interrupt on falling edge (button press)
-	PCICR |= (1 << PCIE0);   // Enable Pin Change Interrupts for PCINT[7:0]
-	PCMSK0 |= (1 << PCINT7); // Enable PCINT7 (PB7) to trigger interrupt
-}
-
 // ISR for button press on PB7
 ISR(PCINT0_vect) {
 	// Check if PB7 caused the interrupt (button press)
 	if (!(PINB & (1 << BUTTON_PIN))) {
 		trigger_bluetooth_pairing();  // Trigger pairing when the button is pressed
 		_delay_ms(20);  // Delay to make sure command is processed
-		turn_on_LED();  // Turn on button LED to indicate button press
 
-		// Simple delay to avoid multiple triggers during button bounce
-		_delay_ms(50);
-		
 		// Wait for button release before allowing another interrupt
 		while (!(PINB & (1 << BUTTON_PIN)));
 	}
 }
-
-
-
-//might need to switch interrupt 1 and interrupt 0
 
 ISR(INT0_vect) {
 	_delay_ms(DEBOUNCE_DELAY_MS);   // Wait for signal to stabilize
@@ -154,7 +139,6 @@ ISR(INT1_vect) {
 int main(void) {
 	USART_Init(BAUDRATE);                   //Initalize Baudrate with USART
 	Power_Init();                           //Initalize LED, pins, and interrupts
-	initialize_gpio();
 	
 	sei();
 
