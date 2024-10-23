@@ -6,7 +6,7 @@
 
 #define POWER_ON_PIN PD2
 #define POWER_OFF_PIN PD3
-#define LED_POWER_PIN PB5
+#define LED_POWER_PIN PB1
 #define BUTTON_PIN PB7
 
 

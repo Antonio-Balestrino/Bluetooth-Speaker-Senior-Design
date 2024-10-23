@@ -27,7 +27,7 @@ ISR(INT0_vect) {
     if (PIND & (1 << POWER_ON_PIN))             // Check if it's still in the expected state
     {
         currentState = POWER_ON;
-        turn_on_LED();
+        turn_off_LED();
         BM83_Power_On();
     }
 }
@@ -37,7 +37,7 @@ ISR(INT1_vect) {
     if (PIND & (1 << POWER_OFF_PIN))            
     {
         currentState = POWER_OFF;
-        turn_off_LED();
+        turn_on_LED();
         BM83_Power_Off();
     }
 }
