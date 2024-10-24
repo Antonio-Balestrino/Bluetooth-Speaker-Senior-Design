@@ -145,7 +145,7 @@
 		(descr "C, Rect series, Radial, pin pitch=5.00mm, , length*width=7*2.5mm^2, Capacitor")
 		(tags "C Rect series Radial pin pitch 5.00mm  length 7mm width 2.5mm Capacitor")
 		(property "Reference" "C7"
-			(at 2.5 -2.5 360)
+			(at 2.5 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "2fc551cd-cc73-4dc6-b384-cd17e15dd039")
 			(effects
@@ -156,7 +156,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 2.5 2.5 360)
+			(at 2.5 2.5 0)
 			(layer "F.Fab")
 			(uuid "c97430b4-e64e-4ccd-b739-8177efb56d66")
 			(effects
@@ -331,7 +331,7 @@
 			(uuid "3098c413-3847-45ee-a69c-74f28520c3cf")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.5 0 360)
+			(at 2.5 0 0)
 			(layer "F.Fab")
 			(uuid "927b82e8-0e29-412a-921b-e5d1ecbd03e8")
 			(effects
@@ -1790,7 +1790,7 @@
 			)
 		)
 		(property "Value" "1.96k"
-			(at 1.524 8.636 0)
+			(at -0.166 2.312 0)
 			(layer "F.Fab")
 			(uuid "0db85427-ef52-4754-9841-bf8b418f88f2")
 			(effects
@@ -7478,7 +7478,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 0.254 -2.286 0)
+			(at 9.982 -2.45 0)
 			(layer "F.Fab")
 			(uuid "1a2087e0-b858-4d30-b71c-ea5def0e007c")
 			(effects
@@ -7988,7 +7988,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 5.08 8.184 0)
+			(at 0.126 2.408 0)
 			(layer "F.Fab")
 			(uuid "0e0c6d18-15b6-459e-81b3-439316f0b24a")
 			(effects
@@ -12597,7 +12597,7 @@
 			(xy 50.8 160.02) (xy 165.1 160.02)
 		)
 		(height 5.079999)
-		(gr_text "114.3000 mm"
+		(gr_text "4500.0000 mils"
 			(at 107.95 163.299999 0)
 			(layer "Cmts.User")
 			(uuid "548b9cd2-f0a8-43f3-935e-3901005d418b")
@@ -12630,7 +12630,7 @@
 			(xy 45.72 63.5) (xy 45.72 152.4)
 		)
 		(height 5.08)
-		(gr_text "88.9000 mm"
+		(gr_text "3500.0000 mils"
 			(at 38.84 107.95 90)
 			(layer "Cmts.User")
 			(uuid "e2d85a4b-7426-4134-82bb-93ef418ec143")
