@@ -1,0 +1,9 @@
+* C:\Users\rhern\OneDrive\Documents\15-Fall 2024\EE 492\Bluetooth-Speaker-Senior-Design\docs\LTSPice Schematics\Power Distribution Jack\PD Jack.asc
+D1 N002 0 D
+R1 N002 N001 1k
+V1 N001 0 18
+.model D D
+.lib C:\Users\rhern\AppData\Local\LTspice\lib\cmp\standard.dio
+.op
+.backanno
+.end
