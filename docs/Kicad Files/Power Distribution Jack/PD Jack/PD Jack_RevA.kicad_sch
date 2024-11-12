@@ -1131,6 +1131,12 @@
 		(uuid "b1c71e14-cc39-4aa0-8d02-0be7a1a76153")
 	)
 	(junction
+		(at 146.05 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b257befa-b69a-4a77-85b6-ad677b19efaa")
+	)
+	(junction
 		(at 129.54 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1220,6 +1226,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 107.95) (xy 176.53 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57ba3d2f-3ff8-4d9b-9d6f-7e2a2bf544f1")
+	)
+	(wire
+		(pts
 			(xy 176.53 107.95) (xy 186.69 107.95)
 		)
 		(stroke
@@ -1230,7 +1246,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 107.95) (xy 176.53 107.95)
+			(xy 118.11 107.95) (xy 146.05 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1367,6 +1383,16 @@
 			(type default)
 		)
 		(uuid "f3745fb1-0b6c-4e2f-a7e7-35669220e54e")
+	)
+	(wire
+		(pts
+			(xy 146.05 107.95) (xy 146.05 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5a15ed4-d4e5-4e22-b88b-366b7ed898e6")
 	)
 	(wire
 		(pts
@@ -1668,6 +1694,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 146.05 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "394c459c-e982-4b5c-a817-3e9cbe910b79")
+		(property "Reference" "#PWR04"
+			(at 146.05 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 146.05 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 146.05 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c84fe1cf-b6f4-45ff-a3a2-96a7fcc6d123")
+		)
+		(instances
+			(project "PD Jack"
+				(path "/35343dae-153f-4bf3-8df5-927c4015efcd"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Barrel_Jack_Switch_MountingPin")
 		(at 110.49 105.41 0)
 		(unit 1)
@@ -1802,6 +1894,79 @@
 			(project ""
 				(path "/35343dae-153f-4bf3-8df5-927c4015efcd"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 191.77 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e552142-4682-4aea-849f-552688ca0d8f")
+		(property "Reference" "(+)J2"
+			(at 194.31 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x03"
+			(at 194.31 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal"
+			(at 191.77 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 191.77 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31daaef1-f5c2-4933-ac59-62a50e6995ba")
+		)
+		(pin "1"
+			(uuid "1c65d026-e598-4311-acbf-0ef22fbf3113")
+		)
+		(pin "3"
+			(uuid "1482833f-d627-4713-b2f8-82dd905f9dcd")
+		)
+		(instances
+			(project "PD Jack"
+				(path "/35343dae-153f-4bf3-8df5-927c4015efcd"
+					(reference "(+)J2")
 					(unit 1)
 				)
 			)
@@ -2154,7 +2319,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4cc0f83-6980-4bab-aa49-8994038f6860")
-		(property "Reference" "J3(-)1"
+		(property "Reference" "(-)J3"
 			(at 194.31 109.2199 0)
 			(effects
 				(font
@@ -2211,7 +2376,7 @@
 		(instances
 			(project "PD Jack"
 				(path "/35343dae-153f-4bf3-8df5-927c4015efcd"
-					(reference "J3(-)1")
+					(reference "(-)J3")
 					(unit 1)
 				)
 			)
@@ -2280,79 +2445,6 @@
 			(project "PD Jack"
 				(path "/35343dae-153f-4bf3-8df5-927c4015efcd"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 191.77 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d99e4761-aacb-4ae7-848c-86459ea17e3b")
-		(property "Reference" "J2(+)1"
-			(at 194.31 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x03"
-			(at 194.31 101.5999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal"
-			(at 191.77 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 191.77 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4121212b-85d3-4b5b-8550-424e6171c7c1")
-		)
-		(pin "1"
-			(uuid "4561d18a-8e7c-4faa-af71-6589ee7e73fb")
-		)
-		(pin "3"
-			(uuid "21418386-0fd2-4b03-80f1-c2c78ee71bb5")
-		)
-		(instances
-			(project ""
-				(path "/35343dae-153f-4bf3-8df5-927c4015efcd"
-					(reference "J2(+)1")
 					(unit 1)
 				)
 			)
