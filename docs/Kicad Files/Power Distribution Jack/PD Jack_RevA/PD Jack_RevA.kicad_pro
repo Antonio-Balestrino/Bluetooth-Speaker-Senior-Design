@@ -431,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PD Jack.kicad_pro",
+    "filename": "PD Jack_RevA.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -466,7 +466,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "PD Jack.net",
-      "plot": "",
+      "plot": "PD Jack_RevA Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
