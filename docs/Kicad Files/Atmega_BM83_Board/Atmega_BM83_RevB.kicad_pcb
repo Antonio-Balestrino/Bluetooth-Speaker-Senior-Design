@@ -6529,7 +6529,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R7"
-			(at 5.08 2.54 360)
+			(at 5.08 2.54 0)
 			(layer "F.SilkS")
 			(uuid "e885cbbd-af17-4ac8-89d0-2b0825a8aaf4")
 			(effects
@@ -6540,7 +6540,7 @@
 			)
 		)
 		(property "Value" "12k"
-			(at 1.778 2.54 360)
+			(at 1.778 2.54 0)
 			(layer "F.Fab")
 			(uuid "17548388-bb22-43f4-96d2-534964ea4b54")
 			(effects
@@ -6755,7 +6755,7 @@
 			(uuid "57eab615-8826-4b1c-abae-4f4b4da2bcef")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "F.Fab")
 			(uuid "2e43f496-7339-48c0-a6f1-dd92647f85b2")
 			(effects
@@ -12233,7 +12233,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "SAN DIEGO STATE UNIVERSITY COLLEGE OF ENGINEERING\nDEPARTMENT OF ELECTRICAL & COMPUTER ENGINEERING\nTEAM BOOM: BT/MC MODULE, REV. A"
+	(gr_text "SAN DIEGO STATE UNIVERSITY COLLEGE OF ENGINEERING\nDEPARTMENT OF ELECTRICAL & COMPUTER ENGINEERING\nTEAM BOOM: BT/MC MODULE, REV. B\n"
 		(at 109.22 147.32 0)
 		(layer "F.SilkS")
 		(uuid "bc0c64a6-f1d2-42b0-bcbb-0b3b124b23df")
